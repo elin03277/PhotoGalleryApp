@@ -19,15 +19,16 @@
         android:textSize="30sp" />
 
     <EditText
+        android:id="@+id/search_fromDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
         android:layout_below="@+id/title_search"
-        android:layout_alignRight="@+id/title_search"
         android:layout_alignEnd="@+id/title_search"
+        android:layout_alignRight="@+id/title_search"
         android:layout_marginTop="30dp"
-        android:id="@+id/search_fromDate" />
+        android:ems="10"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date" />
 
     <TextView
         android:text="From Date: "
@@ -40,15 +41,16 @@
         android:id="@+id/search_fromDateLabel" />
 
     <EditText
+        android:id="@+id/search_toDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
         android:layout_below="@+id/search_fromDate"
-        android:layout_alignRight="@+id/search_fromDate"
         android:layout_alignEnd="@+id/search_fromDate"
+        android:layout_alignRight="@+id/search_fromDate"
         android:layout_marginTop="20dp"
-        android:id="@+id/search_toDate" />
+        android:ems="10"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date" />
 
     <TextView
         android:text="To Date: "
@@ -59,6 +61,72 @@
         android:layout_alignStart="@+id/search_fromDateLabel"
         android:layout_marginTop="12dp"
         android:id="@+id/search_toDateLabel" />
+
+    <EditText
+        android:id="@+id/search_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_toDate"
+        android:layout_alignEnd="@+id/search_toDate"
+        android:layout_alignRight="@+id/search_toDate"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Caption"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/search_captionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/search_toDateLabel"
+        android:layout_alignLeft="@+id/search_toDateLabel"
+        android:layout_alignTop="@+id/search_caption"
+        android:layout_marginTop="13dp"
+        android:text="Caption:" />
+
+    <EditText
+        android:id="@+id/search_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_caption"
+        android:layout_alignEnd="@+id/search_caption"
+        android:layout_alignRight="@+id/search_caption"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Latitude"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <TextView
+        android:id="@+id/search_latitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/search_captionLabel"
+        android:layout_alignLeft="@+id/search_captionLabel"
+        android:layout_alignTop="@+id/search_latitude"
+        android:layout_marginTop="13dp"
+        android:text="Latitude:" />
+
+    <EditText
+        android:id="@+id/search_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_latitude"
+        android:layout_alignEnd="@+id/search_latitude"
+        android:layout_alignRight="@+id/search_latitude"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Longitude"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <TextView
+        android:id="@+id/search_longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/search_latitudeLabel"
+        android:layout_alignLeft="@+id/search_latitudeLabel"
+        android:layout_alignTop="@+id/search_longitude"
+        android:layout_marginTop="13dp"
+        android:text="Longitude:" />
 
     <Button
         android:text="Cancel"
@@ -81,5 +149,7 @@
         android:layout_toEndOf="@+id/search_toDateLabel"
         android:id="@+id/search_search"
         android:onClick="search" />
+
+
 
 </RelativeLayout>
